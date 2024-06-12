@@ -14,10 +14,17 @@
 <?php
 include 'nav_inicial.php';
 ?>
-<img class="img_inicio" src="elementos\argentcoin.gif" alt="">
-<div class="cont">
-  <div class="cuadro"></div>
-  <div class="cuadro"></div>
-</div>
+<main>
+    <div class="cont-img">
+        <img class="img_inicio" src="elementos/argentcoin.gif" alt="">
+    </div>
+    <div class="cuadros">
+      <div class="cuadro"></div>
+      <div class="cuadro"></div>
+      <div class="cuadro"></div>
+
+      <div class="cuadro"></div>
+    </div>
+</main>
 </body>
 </html>
