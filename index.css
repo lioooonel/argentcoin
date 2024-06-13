@@ -4,14 +4,21 @@
 
 main{
     position: absolute;
-    overflow: auto;
+    overflow:auto;
     top: 53px;
-    margin-left: 16.6%;
-    background-color: aqua;
-    width: 83%;
+    margin-left: 15%;
+    background-color: #0f0f0f;
+    width: 85%;
     height: 90%;
+    background-image: url("elementos/pexels-pixabay-106152.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    align-content: center;
 }
+
 main::-webkit-scrollbar {
+    margin-right: 2px;
     width: 5px;
 }
 main::-webkit-scrollbar-thumb {
@@ -20,32 +27,53 @@ main::-webkit-scrollbar-thumb {
 main::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
-
-.cont-img{
-    margin-left: 20%;
-    background-color: rgb(255, 255, 255);
-    margin-top: 50px;
-    height: 300px;
-    width: 700px;
+.titulo{
+    margin: 20px;
+    font-style: italic;
+ font-weight: 900;
+ font-size: 25px;
+ line-height: 48px;
+ color: #FFFFFF;
 }
+.conten-prin{
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 30px;
+    height: max-content;
+    width: 90%;
+    background-color: #0f0f0f;
+    padding: 10px 0;
+    border: 1px solid #7a6936;
+}
+
 .img_inicio{
     padding: 5px;
-    width: 700px;
+    width: 1100px;
     height: 300px;
     
 }
-.cuadros{
+#info-pg{
+    margin-top: 20%;
+}
+
+
+
+#ultimos-agre{
+    margin-top: 20%;
+}
+.monedas{
     margin: 50px 70px;
     width: 900px;
     height: 300px;
     display: flex;
-    background-color: blueviolet;
+    background-color: #0f0f0f;
     justify-content: center;
     align-items: center;
 }
-.cuadro{
-    margin: 10px;
-    width: 100px;
-    height: 200px;
+.moneda{
+    margin: 60px;
+    width: 200px;
+    height: 300px;
     background-color: bisque;
+    border-radius: 10px;
 }

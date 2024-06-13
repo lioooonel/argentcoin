@@ -1,0 +1,105 @@
+*{
+    margin: 0 0 0 0;
+  }
+  
+  body {
+     
+       font-family: Arial, sans-serif;
+       background-color: #000000;
+     }
+    
+  .contenedor-logo {
+      background-color: #000000;
+       display: flex;
+       align-items: center;
+       width: 100%;
+       height: 50px;
+       border-bottom:2px solid #ffff;
+     }
+     header{
+      position: inherit;
+     }
+  .cont_logo {
+       width: 50px; 
+       height: 40px; 
+       background-image: url('elementos/sol_logo.png');
+       background-size: cover;
+       }
+       
+  .nombre-marca {
+    margin-right: 200px;
+   font-style: italic;
+   font-weight: 900;
+   font-size: 25px;
+   line-height: 48px;
+   color: #FFFFFF;
+     }
+     .usuario {
+      float: right;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 48px;
+      color: #ffbf00;
+        }
+        
+        .search {
+            margin-right: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          text-align: center;
+          }
+          
+          .search__input {
+          font-family: inherit;
+          font-size: inherit;
+          background-color: #f4f2f2;
+          border: none;
+          color: #646464;
+          padding: 0.7rem 1rem;
+          border-radius: 30px;
+          width: 22em;
+          transition: all ease-in-out .5s;
+          margin-right: -3rem;
+          }
+          
+          .search__input:hover, .search__input:focus {
+          box-shadow: 0 0 1em #00000013;
+          }
+          
+          .search__input:focus {
+          outline: none;
+          background-color: #f0eeee;
+          }
+          
+          .search__input::-webkit-input-placeholder {
+          font-weight: 100;
+          color: #ccc;
+          }
+          
+          .search__input:focus + .search__button {
+          background-color: #f0eeee;
+          }
+          
+          .search__button {
+          border: none;
+          background-color: #f4f2f2;
+          margin-top: .1em;
+          }
+          
+          .search__button:hover {
+          cursor: pointer;
+          }
+          
+          .search__icon {
+          height: 2em;
+          width: 2em;
+          fill: #b4b4b4;
+          }
+          .pie{
+            bottom: 0;
+            height: 10em;
+            width: 100%;
+            background-color:#0f4020 ;
+          }
