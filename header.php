@@ -1,5 +1,5 @@
 <?php
-echo'<header class="contenedor-logo">
+echo '<header class="contenedor-logo">
   <art class="cont_logo">
     <img class="logo" src="sol_lo.png" alt="">
   </art>

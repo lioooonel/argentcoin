@@ -6,7 +6,7 @@ echo'
     <div class="triangulo1"></div>
   </div>
   <ul>
-  <li class="li"><a href="#">CATALOGO</a>
+  <li class="li"><a href="catalogo.php">CATALOGO</a>
   <div class="submenu">
         <a class="items" href="#">Subopción 1</a>
         <a class="items" href="#">Subopción 2</a>
