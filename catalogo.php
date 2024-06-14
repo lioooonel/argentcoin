@@ -33,11 +33,7 @@
                         echo "<div class='contenedor-items'>";
                         echo "<section class='item'>";
                         echo "<span class='cod_producto'hidden>" . $fila['monedaID'] . "</span>";
-                        echo "<span class='titulo-item'> dajsdsd</span>";
-                        echo "<img src='" . $fila['imgAnverso'] . "'alt='' class='img-item'>";
-                        echo "<span class='fullpost'>";
-                        echo "<p>" . $fila['descripcion'] . "</p>";
-                        echo "</span>";
+                        echo "<img src='moneda/" . $fila['imgAnverso'] . "'alt='' class='img-item'>";
                         echo "<span class='precio-item'>Valor nominal: $" . $fila['valorNominal'] . "</span>";
                         echo "<span class='precio-item'>Valor mercado: $" . $fila['valorMercado'] . "</span>";
                         echo '<button class="boton-item"> Agregar a la colección</button>';
