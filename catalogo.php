@@ -24,21 +24,21 @@
             <div class="productos-container">
                 <?php
                 include 'conectar.php';
-                $sql = "SELECT * FROM moneda, estado ";
+                $sql = "SELECT * FROM moneda, estado where moneda.estadoID=estado.estadoID ";
                 $resultado = mysqli_query($conectar, $sql);
 
                 if (mysqli_num_rows($resultado) > 0) {
                     while ($fila = mysqli_fetch_assoc($resultado)) {
                         echo '<div class="contenedor">';
                         echo '<div class="contenedor-items">';
-                        echo '<section class="item">';
-                        echo '<h3 class="cod_producto"hidden>' . $fila['monedaID'] . '</h3>';
+                        echo '<section class="item"><a href="detalleMoneda.php?id='.$fila['monedaID'].'">';
+                        echo '<h3 class="cod_producto">' . $fila['monedaID'] . '</h3>';
                         echo '<div class="moneda-coint"><img src="moneda/'. $fila['imgAnverso'].'" class="moneda anverso">';
                         echo '<img src="moneda/'. $fila['imgReverso'].'" class="moneda reverso"></div>';
                         echo '<h2 class="info-item">Valor nominal: $' . $fila['descripcion'] . '</h2>';
-                        echo '<h3 class="info-item">Estado: ' . $fila['estadoNombre'] . '</h3>';
+                        echo '<h3 class="info-item">Estado: '.$fila['estadoNombre'] . '</h3>';
                         echo '<h3 class="info-item">Valor mercado: $' . $fila['valorMercado'] . '</h3>';
-                        echo '<button class="boton-item">C</button>';
+                        echo '</a><button class="boton-item">C</button>';
                         echo ' </section></div>';
                         echo '</div>';
                     }
@@ -51,6 +51,7 @@
             </div>
         </article>
     </main>
+    <script src="CATALOGO.js" async></script>
 </body>
 
 </html>
