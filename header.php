@@ -1,9 +1,9 @@
 <?php
 echo '<header class="contenedor-logo">
-  <art class="cont_logo">
-    <img class="logo" src="sol_lo.png" alt="">
-  </art>
-  <h1 class="nombre-marca">ARGENTCOIN</h1>
+<art class="cont_logo">
+<a href="index.php"><img class="logo" src="sol_lo.png" alt=""></a>
+</art>
+  <h1 class="nombre-marca"><a href="index.php">ARGENTCOIN</a></h1>
   <div class="search">
         <input type="text" class="search__input" placeholder="Buscar">
         <button class="search__button">

@@ -24,24 +24,26 @@
             <div class="productos-container">
                 <?php
                 include 'conectar.php';
-                $sql = "SELECT * FROM moneda";
+                $sql = "SELECT * FROM moneda, estado ";
                 $resultado = mysqli_query($conectar, $sql);
 
                 if (mysqli_num_rows($resultado) > 0) {
                     while ($fila = mysqli_fetch_assoc($resultado)) {
-                        echo "<div class='contenedor'>";
-                        echo "<div class='contenedor-items'>";
-                        echo "<section class='item'>";
-                        echo "<span class='cod_producto'hidden>" . $fila['monedaID'] . "</span>";
-                        echo "<img src='moneda/" . $fila['imgAnverso'] . "'alt='' class='img-item'>";
-                        echo "<span class='precio-item'>Valor nominal: $" . $fila['valorNominal'] . "</span>";
-                        echo "<span class='precio-item'>Valor mercado: $" . $fila['valorMercado'] . "</span>";
-                        echo '<button class="boton-item"> Agregar a la colección</button>';
-                        echo " </section></div>";
-                        echo "</div>";
+                        echo '<div class="contenedor">';
+                        echo '<div class="contenedor-items">';
+                        echo '<section class="item">';
+                        echo '<h3 class="cod_producto"hidden>' . $fila['monedaID'] . '</h3>';
+                        echo '<div class="moneda-coint"><img src="moneda/'. $fila['imgAnverso'].'" class="moneda anverso">';
+                        echo '<img src="moneda/'. $fila['imgReverso'].'" class="moneda reverso"></div>';
+                        echo '<h2 class="info-item">Valor nominal: $' . $fila['descripcion'] . '</h2>';
+                        echo '<h3 class="info-item">Estado: ' . $fila['estadoNombre'] . '</h3>';
+                        echo '<h3 class="info-item">Valor mercado: $' . $fila['valorMercado'] . '</h3>';
+                        echo '<button class="boton-item">C</button>';
+                        echo ' </section></div>';
+                        echo '</div>';
                     }
                 } else {
-                    echo "No se encontraron productos.";
+                    echo '<h2 class="adv-no">No se encontraron productos.</h2>';
                 }
 
                 mysqli_free_result($resultado);

@@ -27,12 +27,13 @@
        }
        
   .nombre-marca {
-    margin-right: 200px;
+    color: #FFFFFF;
+   margin-right: 200px;
    font-style: italic;
    font-weight: 900;
    font-size: 25px;
    line-height: 48px;
-   color: #FFFFFF;
+   text-decoration: none;
      }
      .usuario {
       float: right;

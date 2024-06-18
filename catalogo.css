@@ -22,7 +22,6 @@ header h1{
 .productos-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: #251447;
 }
 .contenedor .contenedor-items{
     margin-top: 30px;
@@ -34,43 +33,83 @@ header h1{
 }
 .contenedor .contenedor-items .item{
     display: inline-block;
-    background-color: #b8b5b5;
-    max-width: 200px;
+    background-color: #424242;
+    width: 200px;
     padding: 10px;
     margin: auto;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     transition: .3s;
 }
 .contenedor-items .item:hover{
-    box-shadow: 0 0 10px #251447;
+    box-shadow: 0 0 10px #ffffff;
     scale: 1.05;
 }
-.contenedor-items .item .img-item{
-    border: 1px solid #fff;
-    width: 200px;
-    height: 200px;
-    border-radius: 5px;
+.moneda-coint{
+    background-color: #928f8f;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 5px;
 }
+.moneda{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+  .anverso {
+    transform: rotateY(0deg);
+  }
+  
+  .reverso {
+    transform: rotateY(180deg);
+  }
+  
+  .moneda-coint:hover .anverso {
+    transform: rotateY(-180deg);
+  }
+  
+  .moneda-coint:hover .reverso {
+    transform: rotateY(0deg);
+  }
 .contenedor-items .item .titulo-item{
     display: block;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
 }
-.contenedor-items .item .precio-item{
+.contenedor-items .item .info-item{
+    margin-top: 5px ;
+    color: rgb(228, 227, 227);
+    float: left;
     display: block;
     text-align: center;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 16px;
 }
 .contenedor-items .item .boton-item{
+    position: relative;
     display: block;
-    margin: 10px auto;
-    border: none;
+    float: right;
+    margin-top: 15px ;
     background: #0a0a0a;
-    color: #ffbf00;
+    color: #FFFFFF;
     border: 2px solid #ffbf00;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.2s;
+}
+.contenedor-items .item .boton-item:hover{
+    color:#0a0a0a;
+    background-color: #ffbf00;
+}
+.adv-no{
+    margin-right: 200px;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 48px;
+    color: #FFFFFF;
 }
