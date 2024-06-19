@@ -1,6 +1,33 @@
-.img-moneda{
-color: azure;
+.cont-img-moneda{
+    display: flex;
+position: relative;
+color: rgb(12, 12, 12);
+width: 55%;
+height: 20%;
+background-color: aliceblue;
+margin: 50px 20%;
+border-radius: 15px;
+}
+.imagen-moneda{
+    margin-top: 20px;
+    width: 50%;
+    height: 100%;
 }
 .info-moneda{
-    color: azure;
+    display: flex;
+width: 55%;
+height: 30%;
+background-color: aliceblue;
+margin: 50px 20%;
+border-radius: 15px;
+color: rgb(0, 0, 0);
+flex-direction: column;
+}
+.info {
+    margin: 5px;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 48px;
+    color: #030303;
 }

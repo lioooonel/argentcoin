@@ -56,7 +56,6 @@
     ?>
     <main>
     <article class="conten-prin">
-    <h1 class="titulo">Detalles de la Moneda</h1>
     <div class="productos-container">
         <?php
         include 'conectar.php';
@@ -66,44 +65,18 @@
 
         if (mysqli_num_rows($resultd) > 0) {
             while ($fila = mysqli_fetch_assoc($resultd)) {
-                echo "<section class='img-moneda'>";
-                echo "<img src='moneda/" . $fila['imgAnverso'] ."' alt='Anverso' class='img-item'>";
-                echo "<img src='moneda/" . $fila['imgReverso'] ."' alt='Reverso' class='img-item'>";
-                echo "</section>";
-                echo "<section class='info-moneda'>";
-                echo "<span class='fullpost'>";
-                echo "<p>" . $fila['descripcion'] . "</p>";
-                echo "</span>";
-                echo '<h3 class="info-item">Estado: '.$fila['estadoNombre'] . '</h3>';
-                echo "<span class='precio-item'>Valor nominal: $" . $fila['valorNominal'] . "</span>";
-                echo "<span class='precio-item'>Valor mercado: $" . $fila['valorMercado'] . "</span>";
-                echo "</section>";
-                
-                // Botones para Detalle e Información
-                echo "<button class='btnDetalle' data-moneda='" . $fila['monedaID'] . "'>Detalle</button>";
-                echo "<button class='btnInformacion' data-moneda='" . $fila['monedaID'] . "'>Información</button>";
-
-                // Tabla con detalles adicionales
-                echo "<div>";
-                echo "<table class='tabla-detalle'>";
-                echo "<tr>";
-                echo "<th>Falla</th>";
-                echo "<th>Valor</th>";
-                echo "<th>Forma</th>";
-                echo "<th>Denominación</th>";
-                echo "<th>Tiempo de Uso</th>";
-                echo "<th>Fuera de circulación</th>";
-                echo "</tr>";
-                echo "<tr>";
-                echo "<td>" . $fila['descripcion'] . "</td>";
-                echo "<td>" . $fila['valorMercado'] . "</td>";
-                echo "<td>" . $fila['formaNombre'] . "</td>";
-                echo "<td>" . $fila['valorNominal'] . "</td>";
-                echo "<td>" . $fila['estadoNombre'] . "</td>";
-                echo "<td>" . $fila['estadoNombre'] . "</td>";
-                echo "</tr>";
-                echo "</table>";
-                echo "</div>";
+                echo '<p class="titulo">' . $fila['descripcion'] . '</p>';
+                echo '<section class="cont-img-moneda">';
+                echo '<img class="imagen-moneda" src="moneda/' . $fila['imgAnverso'] .'" alt="Anverso" class="img-item">';
+                echo '<img class="imagen-moneda" src="moneda/' . $fila['imgReverso'] .'" alt="Reverso" class="img-item">';
+                echo '</section>';
+                echo '<section class="info-moneda">';
+                echo '<span class="fullpost">';
+                echo '</span>';
+                echo '<h3 class="info">Estado: '.$fila['estadoNombre'] . '</h3>';
+                echo '<span class="info">Valor nominal: $' . $fila['valorNominal'] . '</span>';
+                echo '<span class="info">Valor mercado: $' . $fila['valorMercado'] . '</span>';
+                echo '</section>';
             }
         } else {
             echo "No se encontraron productos.";
